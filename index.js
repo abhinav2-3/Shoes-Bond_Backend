@@ -16,6 +16,10 @@ app.use("/", dataRoutes);
 
 database();
 
+app.get("/", (req, res) => {
+  res.send("Hello, Abhinav!");
+});
+
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
